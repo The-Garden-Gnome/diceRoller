@@ -1,0 +1,13 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: rgb(252, 207, 190);
+  }
+  
+  fieldset,.results-container{
+    background-color: lightseagreen;
+    width: max-content;
+  }
+  

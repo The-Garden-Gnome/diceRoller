@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Roller</title>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+
+<body>
+    <h1>Dice Roller</h1>
+    <fieldset>
+        <label for="userinput">How many dice?</label>
+        <input type="text" name="userinput" id="userinput">
+        <button id="rollbutton">Roll</button>
+    </fieldset>
+    <button id="show-all-rolls">Show all Rolls</button>
+    <div id="all-rolls">
+        <h3>All Rolls:</h3>
+        <ol id="totalrolls">
+        </ol>
+    </div>
+    <div id="total">
+        <h3>Roll Total:</h3><div id="display"></div>
+    </div>
+    <script src="./assets/main.js"></script>
+</body>
+
+</html>

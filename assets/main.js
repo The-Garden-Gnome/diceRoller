@@ -6,7 +6,7 @@ let rollbutton = document.querySelector('#rollbutton')
 let showallrolls = document.querySelector('#show-all-rolls')
 let allrolls = document.querySelector('#all-rolls')
 let total = document.querySelector('#total')
-let totallist = document.querySelector('#totalrolls')
+let totalList = document.querySelector('#totalrolls')
 let display = document.querySelector('#display')
 
 rollbutton.addEventListener("click", function () {
@@ -30,9 +30,11 @@ for (let index = 0; index < max_rolls; index++) {
 })
 
 showallrolls.addEventListener("click", function(){
- while (dieRolls.length > dieRolls){
+ while (dieRolls.length > 0){
      console.log ("this is working")
-        totalrolls.innerHTML += "<li>"+dieRolls.pop([0])+"</li>";
+     const rollList = document.createElement("li");
+     rollList.innerHTML = +dieRolls.pop([0]);
+     totalList.appendChild(rollList)
         index += 1
     }
 })

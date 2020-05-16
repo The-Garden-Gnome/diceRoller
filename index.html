@@ -12,13 +12,16 @@
     <h1>Dice Roller</h1>
     <fieldset>
         <label for="userinput">How many dice?</label>
-        <input type="text" name="userinput" id="userinput">
+        <input type="number" name="diceNumber" id="diceNumber">
+        <label for="userinput">How many sides on your die?</label>
+        <input type="number" name="diceSides" id="diceSides">
         <button id="rollbutton">Roll</button>
     </fieldset>
     <button id="show-all-rolls">Show all Rolls</button>
+    <button id="reset-button">RESET</button><br>
     <div id="all-rolls">
         <h3>All Rolls:</h3>
-        <ol id="totalrolls">
+      <ol id="totalrolls">
         </ol>
     </div>
     <div id="total">

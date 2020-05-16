@@ -1,21 +1,26 @@
 let dieRolls = []
 let index = 0
 let totalroll = 0
-let userinput = document.querySelector('#userinput')
+let diceNumber = document.querySelector('#diceNumber')
+let diceSides = document.querySelector('#diceSides')
 let rollbutton = document.querySelector('#rollbutton')
 let showallrolls = document.querySelector('#show-all-rolls')
 let allrolls = document.querySelector('#all-rolls')
 let total = document.querySelector('#total')
 let totalList = document.querySelector('#totalrolls')
 let display = document.querySelector('#display')
+let reset = document.querySelector("#reset-button");
 
 rollbutton.addEventListener("click", function () {
-    let max_rolls = userinput.value;
+    let max_rolls = diceNumber.value;
 for (let index = 0; index < max_rolls; index++) {
-    let roll = Math.floor((Math.random() * 6) + 1);
+    let roll = Math.floor((Math.random() * diceSides.value) + 1);
     dieRolls.push(roll);
-    display.innerHTML = "You rolled " + roll + "!";
 }
+    let sum = dieRolls.reduce(function (accumulator, currentValue){
+        return accumulator + currentValue
+    }, 0)
+    display.innerHTML = "You rolled " + sum + "!";
 
     // let maxRolls = userinput.value;
     // let index = 0;
@@ -38,3 +43,10 @@ showallrolls.addEventListener("click", function(){
         index += 1
     }
 })
+
+reset.addEventListener("click",
+    function () {
+        dieRolls = [];
+        totalList.innerHTML = " ";
+        display.innerHTML = " ";
+    })

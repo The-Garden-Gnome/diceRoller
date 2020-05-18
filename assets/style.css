@@ -11,3 +11,12 @@
     width: max-content;
   }
   
+  #reset-button {
+    background-color: #e5e8ee;
+    margin-bottom: 5px;
+}
+
+button {
+  border-radius: 20px;
+}
+
